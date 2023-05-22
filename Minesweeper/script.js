@@ -236,7 +236,13 @@ function NewGame () {
     GameStarted = false
     clearInterval(timerInterval)
     timerInterval = null
-    document.querySelector('.timer').innerText = `Time: ${0} sec` 
+    time = 0
+    document.querySelector('.timer').innerText = `Time: ${0} sec`
+     cellsInfo[i].classList.remove('n1')
+     cellsInfo[i].classList.remove('n2')
+     cellsInfo[i].classList.remove('n3')
+     cellsInfo[i].classList.remove('n4')
+     cellsInfo[i].classList.remove('n5')
 }
 
 restart.addEventListener('click', () => {
