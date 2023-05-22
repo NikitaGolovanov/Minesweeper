@@ -243,6 +243,7 @@ function NewGame () {
      cellsInfo[i].classList.remove('n3')
      cellsInfo[i].classList.remove('n4')
      cellsInfo[i].classList.remove('n5')
+     gameOver = false
 }
 
 restart.addEventListener('click', () => {
