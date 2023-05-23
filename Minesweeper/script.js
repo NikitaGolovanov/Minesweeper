@@ -84,7 +84,6 @@ function startTimer () {
     }
 }
 
-var allCells = []
 var FinalArray = []
 var totalArray = []
 
@@ -218,7 +217,6 @@ function recursiveCheck (i) {
 }
 
 function NewGame () {
-    allCells.splice(0,allCells.length)
     FinalArray.splice(0,FinalArray.length)
     totalArray.splice(0,totalArray.length)
     clicks = 0
@@ -238,11 +236,13 @@ function NewGame () {
     timerInterval = null
     time = 0
     document.querySelector('.timer').innerText = `Time: ${0} sec`
+    for (let i = 0; i < 100; i++) {
      cellsInfo[i].classList.remove('n1')
      cellsInfo[i].classList.remove('n2')
      cellsInfo[i].classList.remove('n3')
      cellsInfo[i].classList.remove('n4')
      cellsInfo[i].classList.remove('n5')
+    }
      gameOver = false
 }
 
@@ -255,6 +255,7 @@ var flagPlace = false
 
 flagMode.addEventListener('click', () => {
     flagPlace = !flagPlace
+    document.querySelector('.flagMode').classList.toggle('active')
 })
 
 document.querySelector('.dayNight').addEventListener('click', () => {
